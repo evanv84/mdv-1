@@ -1,0 +1,24 @@
+extends ./layouts/master.pug
+
+block title
+  title My duck's vision
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+  .main-wrapper
+    .row
+      a(href="#").card.full
+        img(src="assets/images/bg1.jpg", alt="")
+    .row
+      .side.one-side
+        a(href="#").card.full
+         img(src="assets/images/bg4.jpg", alt="")
+      .side.double-side
+        a(href="#", style={'background-image': 'url(assets/images/bg3.jpg)'}).card.full
+        a(href="#", style={'background-image': 'url(assets/images/bg2.jpg)'}).card.full
+    .row
+      a(href="#").card.full
+        img(src="assets/images/bg1.jpg", alt="")
