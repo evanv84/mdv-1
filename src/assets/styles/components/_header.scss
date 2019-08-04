@@ -5,6 +5,11 @@ header {
     background: #fff;
     padding: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    left: 0;
+    transition: all .55s ease;
+    z-index: 1;
 }
 
 .header-controls {
@@ -15,4 +20,11 @@ header {
 .header-link {
     color: black;
     margin-right: 20px;
+}
+
+//- animations 
+
+.hide {
+    // position: fixed;
+    top: -120px;
 }

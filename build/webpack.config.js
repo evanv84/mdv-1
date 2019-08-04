@@ -29,7 +29,15 @@ module.exports = env => {
     },
     resolve: {
       extensions: ['.js'],
+      modules: ['node_modules'],
       alias: {
+        'TweenLite': 'gsap/src/minified/TweenLite.min.js',
+        'TweenMax': 'gsap/src/minified/TweenMax.min.js',
+        'TimelineLite': 'gsap/src/minified/TimelineLite.min.js',
+        'TimelineMax': 'gsap/src/minified/TimelineMax.min.js',
+        'ScrollMagic': 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+        'animation.gsap': 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+        'debug.addIndicators': 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
         source: path.resolve(__dirname, '../src'), // Relative path of src
         images: path.resolve(__dirname, '../src/assets/images'), // Relative path of images
         fonts: path.resolve(__dirname, '../src/assets/fonts'), // Relative path of fonts
@@ -150,7 +158,7 @@ module.exports = env => {
         Pages
       */
 
-      // // Desktop page
+      // Desktop page
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: 'views/index.pug',
