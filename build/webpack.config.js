@@ -21,7 +21,7 @@ module.exports = env => {
     },
     output: {
       path: path.resolve(__dirname, '../dist'),
-      publicPath: '/',
+      publicPath: './',
       filename: 'assets/js/[name].[hash:7].bundle.js'
     },
     devServer: {
@@ -96,7 +96,7 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 3000,
-            name: 'assets/images/[name].[hash:7].[ext]'
+            name: '/assets/images/[name].[hash:7].[ext]'
           }
         },
         {
@@ -104,7 +104,7 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 5000,
-            name: 'assets/fonts/[name].[hash:7].[ext]'
+            name: '/assets/fonts/[name].[hash:7].[ext]'
           }
         },
         {
