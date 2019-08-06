@@ -33,3 +33,8 @@ $('.card').each(function(index) {
     .setTween(tweenCard)
     .addTo(controller);
 })
+
+$('#menuBtn').click(function() {
+    $('#menu').toggleClass('menu-slide-in');
+    $('#header, #menuBtn').toggleClass('menu-opened')
+})

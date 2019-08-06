@@ -1,2 +1,16 @@
-button.menu(type="button")
-    span.button-content
+#menu
+    .title-block
+        h2 My Duck's Vision
+        p креативное агентство
+    ul.menu-list
+        li.menu-list-item
+            a(href="#") О нас
+        li.menu-list-item
+            a(href="#") Портфолио
+        li.menu-list-item
+            a(href="#") Контакты
+    .menu-footer
+        button.btn.white(type="button") Заказать проект
+        .menu-socials
+            include ../mixins/socialsRow.pug
+            +socialsRow('white')

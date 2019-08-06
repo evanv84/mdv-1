@@ -10,6 +10,12 @@ header {
     left: 0;
     transition: all .55s ease;
     z-index: 1;
+    &.menu-opened { 
+        top: 0;
+        .header-controls {
+            z-index: 20;
+        }
+    }
 }
 
 .header-controls {
