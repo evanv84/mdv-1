@@ -1,5 +1,6 @@
 footer {
     padding: 34px 4px;
+    background-color: white;
 }
 
 .footer-logo { 
@@ -17,9 +18,12 @@ footer {
     margin-top: 32px;
 
     a {
-        margin-right: 15px;
+        margin-right: 20px;
         color: black;
-        font-size: 24px;;
+        font-size: 24px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     &.white {

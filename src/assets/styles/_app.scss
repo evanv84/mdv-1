@@ -21,7 +21,8 @@
 @import './components/link';
 @import './components/header';
 @import './components/menuBtn';
-@import './components//menu';
+@import './components/menu';
+@import './components/postSocials';
 
 /*
   Layout
@@ -33,3 +34,4 @@
   Pages
 */
 @import './pages/main';
+@import './pages/post';

@@ -1,0 +1,23 @@
+extends ../layouts/master.pug
+
+block title
+  title Some post - title
+
+block content
+    .post-wrapper
+        h1 Теория заговора — I’m lovin’ it! 💖
+        include ../components/postSocials.pug
+        .hero-content
+          iframe(width="100%" height="100%" src="https://www.youtube.com/embed/WizgSa1byUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        p.post-description Это не просто рекламный ролик, а настоящий стандарт индустрии, который мы установили в России. «Скандальная правда» — самый копируемый формат My Duck’s Vision, визитная карточка агентства. Ежегодно появляются десятки видео в похожей стилистике, и авторство каждого из них приписывают нам.
+    .post-more-block
+        h2 Другие работы:
+        .row
+          a(href="#").card
+            img(src="assets/images/bg5.jpg", alt="")
+        .row
+          a(href="#").card
+            img(src="assets/images/bg9.jpg", alt="")
+        .row
+          a(href="#").card
+            img(src="assets/images/bg13.jpg", alt="")

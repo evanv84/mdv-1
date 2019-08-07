@@ -1,0 +1,28 @@
+.post-wrapper {
+    flex: 1;
+    padding: 4px;
+    h1 {
+        width: 75%;
+    }
+
+    .hero-content {
+        margin: 22px 0;
+        height: 211px;
+    }
+}
+
+.post-description {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 22px;
+}
+
+.post-more-block {
+    background-color: white;
+    padding: 4px;
+    h2 {
+        font-size: 28px;
+        line-height: 36px;
+        padding: 22px 0;
+    }
+}
