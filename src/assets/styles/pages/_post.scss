@@ -3,6 +3,9 @@
     padding: 4px;
     h1 {
         width: 75%;
+        margin: 22px 0;
+        font-size: 28px;
+        line-height: 36px;
     }
 
     .hero-content {
@@ -25,4 +28,74 @@
         line-height: 36px;
         padding: 22px 0;
     }
+}
+
+.highlight-button {
+    height: 44px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-top: 1px solid rgba($color: black, $alpha: .1);
+
+    i {
+        margin-right: 20px;
+        font-size: 22px;
+    }
+
+    span {
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
+.highlights {
+    .highlight {
+        &:last-child {
+            .highlight-button {
+                border-bottom: 1px solid rgba($color: black, $alpha: .1);
+            }
+        }
+    }
+}
+
+.highlight {
+    .text-wrapper {
+        padding: 4px;
+        h2 {
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 14px;
+        }
+        p {
+            font-size: 17px;
+            line-height: 24px; 
+            margin-bottom: 22px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    .quote {
+        background-color: #fff;
+        padding: 9px 24px 9px 36px;
+        .quote-text {
+            font-size: 18px;
+            line-height: 28px;
+            font-style: italic;
+            margin-bottom: 22px;
+        }
+        .quote-link {
+            font-style: italic;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 22px;
+        }
+    }
+}
+
+.highlight-content {
+    display: none;
 }

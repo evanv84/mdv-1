@@ -42,3 +42,8 @@ $('#menuBtn').click(function() {
     $('#menu').toggleClass('menu-slide-in');
     $('#header, #menuBtn').toggleClass('menu-opened')
 })
+
+$('.highlight-button').click(function() {
+    const parent = $(this).parent();
+    parent.find('.highlight-content').slideToggle();
+})
