@@ -1,0 +1,178 @@
+#map {
+    width: 100%;
+    height: 253px;
+    margin: 22px 0;
+}
+
+.contact-wrapper {
+    padding: 4px;
+}
+
+.contacts-list {
+    li {
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+
+    a {
+        color: #000;
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+.callback-form {
+    h2 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 28px;
+    }
+    background-color: #fff;
+    padding: 4px;
+    .form-group { 
+        position:relative; 
+        margin-bottom:36px; 
+        
+        [type="checkbox"]:checked,
+        [type="checkbox"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        [type="checkbox"]:checked + label,
+        [type="checkbox"]:not(:checked) + label
+        {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #666;
+        }
+        [type="checkbox"]:checked + label:before,
+        [type="checkbox"]:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #000;
+            background: #fff;
+            border-radius: 2px;
+        }
+        [type="checkbox"]:checked + label:after,
+        [type="checkbox"]:not(:checked) + label:after {
+            content: '\2714';
+            position: absolute;
+            top: 2px;
+            left: 6px;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        [type="checkbox"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        [type="checkbox"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        .texted-input {
+            font-size:18px;
+            padding:10px 10px 10px 5px;
+            display:block;
+            width: 100%;
+            border:none;
+            border-bottom:1px solid #757575;
+        }
+
+        .texted-input:focus { outline:none; }
+    
+        .texted-label {
+            color:#999; 
+            font-size:18px;
+            font-weight:normal;
+            position:absolute;
+            pointer-events:none;
+            left:5px;
+            top:10px;
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+        }
+
+        .texted-input:focus ~ .texted-label, .texted-input:valid ~ .texted-label {
+            top:-20px;
+            font-size:14px;
+            color:#5264AE;
+        }
+        
+        .bar { 
+            position:relative; 
+            display:block; 
+            width:100%; 
+        }
+
+        .bar:before, .bar:after 	{
+            content:'';
+            height:2px; 
+            width:0;
+            bottom:1px; 
+            position:absolute;
+            background:#5264AE; 
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+        }
+
+        .bar:before {
+            left:50%;
+        }
+
+        .bar:after {
+            right:50%; 
+        }
+        
+        /* active state */
+        .texted-input:focus ~ .bar:before, .texted-input:focus ~ .bar:after {
+            width:50%;
+        }
+        
+        /* HIGHLIGHTER ================================== */
+        .input-highlight {
+            position:absolute;
+            height:60%; 
+            width:100px; 
+            top:25%; 
+            left:0;
+            pointer-events:none;
+            opacity:0.5;
+        }
+        
+        /* active state */
+        .texted-input:focus ~ .input-highlight {
+            -webkit-animation:inputHighlighter 0.3s ease;
+            -moz-animation:inputHighlighter 0.3s ease;
+            animation:inputHighlighter 0.3s ease;
+        }
+        
+        /* ANIMATIONS ================ */
+        @-webkit-keyframes inputHighlighter {
+            from { background:#5264AE; }
+            to 	{ width:0; background:transparent; }
+        }
+        @-moz-keyframes inputHighlighter {
+            from { background:#5264AE; }
+            to 	{ width:0; background:transparent; }
+        }
+        @keyframes inputHighlighter {
+            from { background:#5264AE; }
+            to 	{ width:0; background:transparent; }
+        }
+    }
+}

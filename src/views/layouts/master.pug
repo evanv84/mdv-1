@@ -26,7 +26,8 @@ html(lang='ru')
 
     //- Preloaded scripts
     script(src="https://kit.fontawesome.com/ec6bf235fa.js")
-
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwW-7IhuqjzV-UNaJFzEcE7pY84r7fRdc" async defer)
+    
     //- Title
     block title
       title Your project!
@@ -48,7 +49,7 @@ html(lang='ru')
       block content
 
     //- Footer
-    include ../components/footer.pug
+    block footer
 
     //- block scripts
     block scripts

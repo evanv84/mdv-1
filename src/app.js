@@ -7,5 +7,7 @@ $(document).ready(() => {
   require('scripts/jssocials.min');
   require('scripts/demo');
   require('scripts/animations');
-  require('scripts/script')
+  require('scripts/script');
+  require('scripts/map');
+  require('scripts/carousel');
 });

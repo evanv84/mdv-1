@@ -14,10 +14,52 @@ block manifestBrowserconfigFiles
 
 block content
 
-  //- Desktop page
-  section.page.contact__page
-    h1.page__title # Contact page
-    p Thank you for your supporting :)
-    p
-      a(href="https://www.buymeacoffee.com/edgardo" target="_blank")
-        img(src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;")
+  .contact-wrapper
+    h1.title «Отведите меня к вашему лидеру!»
+    #map
+    ul.contacts-list
+      li
+        a(href="mailto:sales@myducksvision.ru")
+          i.fas.fa-envelope
+          span sales@myducksvision.ru
+      li
+        a(href="tel:89857898991")
+          i.fas.fa-phone-alt
+          span 8-985-789-89-91
+      li
+        span МФК «Город Столиц Москва» Москва, Пресненская набережная, дом 8, строение 1, 30 этаж
+    .highlights
+      .highlight
+        .highlight-button
+          i.fas.fa-angle-down
+          span Как к нам пройти #[i (подробная инструкция)]
+        .highlight-content
+          .text-wrapper
+            p Это не просто рекламный ролик, а настоящий стандарт индустрии, который мы установили в России. «Скандальная правда» — самый копируемый формат My Duck’s Vision, визитная карточка агентства. Ежегодно появляются десятки видео в похожей стилистике, и авторство каждого из них приписывают нам.
+  .callback-form
+    h2 Обратная связь:
+    form(action="")
+      .form-group
+        input.texted-input(type="text" required)
+        span.input-highlight
+        span.bar
+        label.texted-label(for="") Имя
+      .form-group
+        input.texted-input(type="text" required)
+        span.input-highlight
+        span.bar
+        label.texted-label(for="") Email
+      .form-group
+        input.texted-input(type="text" required)
+        span.input-highlight
+        span.bar
+        label.texted-label(for="") Сообщение
+      .form-group
+        input.checkbox#check(type="checkbox" checked)
+        label.checkbox-label(for="check") Нажимая на кнопку «Отправить», я принимаю условия #[a(href="") Пользовательского соглашения и даю согласие на обработку моих персональных данных]
+      button.btn Отправить
+    include ../components/socialsRow.pug
+    .footer-logo
+      img(src="assets/images/footer-logo.svg", alt="footer logo")
+    .copyright-text ©2019 My Duck's Vision
+

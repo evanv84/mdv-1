@@ -6,20 +6,17 @@ const controller = new ScrollMagic.Controller();
 
 const headerScene = new ScrollMagic.Scene({
 triggerElement: "content-wrapper",
-offset: 300,
+offset: 550,
 })
-.setClassToggle('#header', 'hide')
 .addTo(controller)
 .on('update', event => {
     const direction = event.target.controller().info('scrollDirection')
     if (direction === 'REVERSE') {
         $('#header').removeClass('hide');
     } else {
-        setTimeout(() => {
-            if (direction !== 'REVERS') {
-                $('#header').addClass('hide');
-            }
-        }, 400)
+        if ($(window).scrollTop() >= 250) {
+            $('#header').addClass('hide');
+        }
     }
     
 })
@@ -45,5 +42,7 @@ $('#menuBtn').click(function() {
 
 $('.highlight-button').click(function() {
     const parent = $(this).parent();
+    const icon = $(this).find('.fas').toggleClass('fa-angle-down fa-angle-up')
     parent.find('.highlight-content').slideToggle();
+    $(this).toggleClass('active')
 })
