@@ -10,8 +10,8 @@
     top: 0;
     left: 0;
     color: white;
-    padding-top: 60px;
-    padding-bottom: 80px;
+    padding-top: 80px;
+    padding-bottom: 70px;
     transition: all .45s;
     opacity: 0;
     transform: translateX(100%);
@@ -24,11 +24,16 @@
     .title-block {
         h2 {
             font-size: 28px;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+            line-height: 36px;
+            font-weight: 500;
         }
         p {
             text-align: center;
-            opacity: 0.5;
+            opacity: 0.4;
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 300;
         }
     }
 }
@@ -42,8 +47,19 @@
     &-item {
         margin-bottom: 18px;
         a {
-            font-size: 26px;
+            font-size: 28px;
+            line-height: 28px;
+            font-weight: 500;
             color: white;
         }
+    }
+}
+
+.menu-footer {
+    .btn {
+        margin-bottom: 80px;
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: normal;
     }
 }

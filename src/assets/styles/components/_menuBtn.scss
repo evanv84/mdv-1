@@ -8,15 +8,20 @@
     height: 40px;
 
     &.menu-opened {
+        height: 44px;
+        border-radius: 50%;
         .button-content {
+            width: 18px;
             span {
                 transform: scale(0);
                 transform-origin: 50% 50%;
             }
             &:after {
+                width: 18px;
                 transform: rotate(45deg) translate(4px, 4px);
             }
             &:before {
+                width: 18px;
                 transform: rotate(-45deg) translate(5px,-4px);
             }
         }

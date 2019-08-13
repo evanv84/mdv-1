@@ -15,6 +15,10 @@ header {
         .header-controls {
             z-index: 20;
         }
+        
+        .header-link {
+            color: #fff;
+        }
     }
 }
 
@@ -26,6 +30,7 @@ header {
 .header-link {
     color: black;
     margin-right: 20px;
+    font-weight: 500;
 }
 
 //- animations 

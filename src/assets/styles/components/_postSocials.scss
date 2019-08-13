@@ -1,6 +1,15 @@
 @import './plugins/jssocials.css';
 @import './plugins/jssocials-theme-flat.css';
 
+.jssocials-shares {
+    margin: 0;
+}
+
+.jssocials-share {
+    margin: 0;
+    margin-right: 5px;
+}
+
 .post-socials {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }

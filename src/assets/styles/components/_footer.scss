@@ -1,5 +1,5 @@
 footer {
-    padding: 34px 4px;
+    padding: 34px 4px 21px 4px;
     background-color: white;
 }
 
@@ -7,7 +7,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 30px 0;
+    margin: 28px 0px 17px 0px;
 }
 
 .socials-row {
@@ -20,7 +20,7 @@ footer {
     a {
         margin-right: 20px;
         color: black;
-        font-size: 24px;
+        font-size: 32px;
         &:last-child {
             margin-right: 0;
         }
@@ -35,4 +35,10 @@ footer {
 
 .copyright-text {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    height: 32px;
 }

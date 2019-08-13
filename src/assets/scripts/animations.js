@@ -24,11 +24,11 @@ offset: 550,
 $('.card').each(function(index) {
     const currentCard = this;
     const tweenCard = new TimelineMax()
-    .to(currentCard, 0.5, {css: {transform: "translateY(0)", opacity: 1}}).delay(0.0015 * index);
+    .to(currentCard, 0.5, {css: {transform: "translateY(0)", opacity: 1}}).delay(0.03 * index);
 
     const cardScene = new ScrollMagic.Scene({
         triggerElement: currentCard,
-        offset: -120,
+        offset: -170,
         triggerHook: 1,
     })
     .setTween(tweenCard)
