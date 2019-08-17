@@ -37,8 +37,21 @@ $('.card').each(function(index) {
 })
 
 $('#menuBtn').click(function() {
-    $('#menu').toggleClass('menu-slide-in');
-    $('#header, #menuBtn').toggleClass('menu-opened')
+    if (!$('.order-block').hasClass('menu-slide-in')) {
+        $('#menu').toggleClass('menu-slide-in');
+        $('#header, #menuBtn').toggleClass('menu-opened')
+    }
+
+    if (!$('#menu').hasClass('menu-slide-in')) {
+        $('#header, #menuBtn').removeClass('menu-opened')
+    }
+    
+    $('.order-block').removeClass('menu-slide-in');
+})
+
+$('.order-btn').click(function() {
+    $('.order-block').addClass('menu-slide-in')
+    $('#header, #menuBtn').addClass('menu-opened')
 })
 
 $('.highlight-button').click(function() {

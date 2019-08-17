@@ -31,6 +31,43 @@
     }
     background-color: #fff;
     padding: 4px;
+    &.white {
+        background-color: transparent;
+        .form-group {
+            .texted-label {
+                color: rgba($color: #fff, $alpha: .55);
+            }
+            .texted-input {
+                border-bottom:1px solid white;
+                color: #fff;
+            }
+
+            .texted-input:focus ~ .texted-label, .texted-input:valid ~ .texted-label {
+                top:-20px;
+                font-size:14px;
+                color:#fff;
+            }
+
+            .bar:before, .bar:after {
+                background: #fff;
+            }
+
+            [type="checkbox"]:checked + label,
+            [type="checkbox"]:not(:checked) + label {
+                color: #fff;
+                a {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+            }
+
+            [type="checkbox"]:checked + label:before,
+            [type="checkbox"]:not(:checked) + label:before {
+                background: transparent;
+                border-color:white;
+            }
+        }
+    }
     .form-group { 
         position:relative; 
         margin-bottom:36px; 
@@ -93,7 +130,8 @@
             display:block;
             width: 100%;
             border:none;
-            border-bottom:1px solid #757575;
+            background-color: transparent;
+            border-bottom:1px solid #000;
         }
 
         .texted-input:focus { outline:none; }
