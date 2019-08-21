@@ -3,13 +3,17 @@
     height: 253px;
     margin-bottom: 17px;
 }
-
-.contact-wrapper {
-    padding: 4px;
+.contacts-footer {
+    padding: 28px 4px 21px 4px;
+    background-color: #fff;
+    .socials-row {
+        margin-top: 0px;
+    }
 }
-
 .contacts-list {
     margin-bottom: 17px;
+    padding-left: 8px;
+    padding-right: 20px;
     li {
         font-size: 17px;
         line-height: 24px;
@@ -28,8 +32,8 @@
         font-size: 28px;
         line-height: 36px;
         margin-bottom: 28px;
+        margin-top: 7px;
     }
-    background-color: #fff;
     padding: 4px;
     &.white {
         background-color: transparent;
@@ -70,8 +74,12 @@
     }
     .form-group { 
         position:relative; 
-        margin-bottom:36px; 
-        
+        margin-bottom:10px;
+
+        &.textarea-group {
+            margin-bottom: 20px;
+        }
+
         .checkbox-label {
             padding-left: 35px;
             font-size: 11px;
@@ -126,96 +134,13 @@
 
         .texted-input {
             font-size:18px;
-            padding:10px 10px 10px 0;
+            line-height: 24px;
             display:block;
             width: 100%;
             border:none;
             background-color: transparent;
-            border-bottom:1px solid #000;
-        }
-
-        .texted-input:focus { outline:none; }
-    
-        .texted-label {
-            color:#999; 
-            font-size:17px;
-            font-weight:normal;
-            position:absolute;
-            pointer-events:none;
-            left:5px;
-            top:10px;
-            transition:0.2s ease all; 
-            -moz-transition:0.2s ease all; 
-            -webkit-transition:0.2s ease all;
-        }
-
-        .texted-input:focus ~ .texted-label, .texted-input:valid ~ .texted-label {
-            top:-20px;
-            font-size:14px;
-            color:#5264AE;
-        }
-        
-        .bar { 
-            position:relative; 
-            display:block; 
-            width:100%; 
-        }
-
-        .bar:before, .bar:after 	{
-            content:'';
-            height:2px; 
-            width:0;
-            bottom:1px; 
-            position:absolute;
-            background:#5264AE; 
-            transition:0.2s ease all; 
-            -moz-transition:0.2s ease all; 
-            -webkit-transition:0.2s ease all;
-        }
-
-        .bar:before {
-            left:50%;
-        }
-
-        .bar:after {
-            right:50%; 
-        }
-        
-        /* active state */
-        .texted-input:focus ~ .bar:before, .texted-input:focus ~ .bar:after {
-            width:50%;
-        }
-        
-        /* HIGHLIGHTER ================================== */
-        .input-highlight {
-            position:absolute;
-            height:60%; 
-            width:100px; 
-            top:25%; 
-            left:0;
-            pointer-events:none;
-            opacity:0.5;
-        }
-        
-        /* active state */
-        .texted-input:focus ~ .input-highlight {
-            -webkit-animation:inputHighlighter 0.3s ease;
-            -moz-animation:inputHighlighter 0.3s ease;
-            animation:inputHighlighter 0.3s ease;
-        }
-        
-        /* ANIMATIONS ================ */
-        @-webkit-keyframes inputHighlighter {
-            from { background:#5264AE; }
-            to 	{ width:0; background:transparent; }
-        }
-        @-moz-keyframes inputHighlighter {
-            from { background:#5264AE; }
-            to 	{ width:0; background:transparent; }
-        }
-        @keyframes inputHighlighter {
-            from { background:#5264AE; }
-            to 	{ width:0; background:transparent; }
+            border:1px solid rgba(0, 0, 0, 0.25);
+            padding: 10px 16px;
         }
     }
 }

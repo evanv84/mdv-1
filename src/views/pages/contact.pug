@@ -13,7 +13,19 @@ block manifestBrowserconfigFiles
   meta(name='msapplication-config' content='../browserconfig.xml')
 
 block content
-
+  .callback-form
+    h2 Обратная связь:
+    form(action="")
+      .form-group
+        input.texted-input(type="text" placeholder="Имя")
+      .form-group
+        input.texted-input(type="email" placeholder="Email")
+      .form-group.textarea-group
+        textarea.texted-input(placeholder="Сообщение")
+      .form-group
+        input.checkbox#check(type="checkbox" checked)
+        label.checkbox-label(for="check") Нажимая на кнопку «Отправить», я принимаю условия #[a(href="") Пользовательского соглашения и даю согласие на обработку моих персональных данных]
+      button.btn Отправить
   .contact-wrapper
     h1.title «Отведите меня к вашему лидеру!»
     #map
@@ -36,30 +48,9 @@ block content
         .highlight-content
           .text-wrapper
             p Это не просто рекламный ролик, а настоящий стандарт индустрии, который мы установили в России. «Скандальная правда» — самый копируемый формат My Duck’s Vision, визитная карточка агентства. Ежегодно появляются десятки видео в похожей стилистике, и авторство каждого из них приписывают нам.
-  .callback-form
-    h2 Обратная связь:
-    form(action="")
-      .form-group
-        input.texted-input(type="text" required)
-        span.input-highlight
-        span.bar
-        label.texted-label(for="") Имя
-      .form-group
-        input.texted-input(type="text" required)
-        span.input-highlight
-        span.bar
-        label.texted-label(for="") Email
-      .form-group
-        input.texted-input(type="text" required)
-        span.input-highlight
-        span.bar
-        label.texted-label(for="") Сообщение
-      .form-group
-        input.checkbox#check(type="checkbox" checked)
-        label.checkbox-label(for="check") Нажимая на кнопку «Отправить», я принимаю условия #[a(href="") Пользовательского соглашения и даю согласие на обработку моих персональных данных]
-      button.btn Отправить
-    include ../components/socialsRow.pug
-    .footer-logo
-      img(src="assets/images/footer-logo.svg", alt="footer logo")
-    .copyright-text ©2019 My Duck's Vision
+    .contacts-footer
+      include ../components/socialsRow.pug
+      .footer-logo
+        img(src="assets/images/footer-logo.svg", alt="footer logo")
+      .copyright-text ©2019 My Duck's Vision
 

@@ -1,0 +1,144 @@
+.post-wrapper1 {
+    flex: 1;
+    padding: 0 12px;
+    h1 {
+        width: 75%;
+        margin-bottom: 6px 0 17px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .hero-content {
+        margin-top: 17px;
+        margin-bottom: 17px;
+        height: 211px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .sub-title-text {
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.post-description {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.post-more-block {
+    background-color: white;
+    padding: 4px;
+    h2 {
+        font-size: 28px;
+        line-height: 36px;
+        padding: 10px 0 18px;
+    }
+}
+
+.highlight-button {
+    height: 44px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-top: 1px solid rgba($color: black, $alpha: .1);
+
+
+    i {
+        margin-right: 20px;
+        font-size: 22px;
+        transition: all .35s;
+    }
+
+    span {
+        font-size: 17px;
+        line-height: 24px;
+        i {
+            font-size: 13px;
+            font-style: normal;
+        }
+    }
+}
+
+.highlights {
+    .highlight {
+        &:last-child {
+            .highlight-button {
+                border-bottom: 1px solid rgba($color: black, $alpha: .1);
+                &.active {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.highlight {
+    .text-wrapper {
+        padding: 12px;
+        h2 {
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 14px;
+        }
+        p {
+            font-size: 17px;
+            line-height: 24px; 
+            margin-bottom: 17px;
+        }
+        img {
+            width: 100%;
+            margin-bottom: 17px;
+        }
+    }
+
+    .quote {
+        background-color: #fff;
+        padding: 9px 24px 40px 36px;
+        .quote-text {
+            font-size: 18px;
+            line-height: 28px;
+            font-style: italic;
+            margin-bottom: 22px;
+        }
+        .quote-link {
+            font-style: italic;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 22px;
+        }
+    }
+}
+
+.jssocials-share-link {
+    border-radius: 3px;
+    width: 32px;
+    height: 24px;
+    &.jssocials-share-no-count {
+        padding-top: 0.37em;
+    }
+}
+
+.jssocials-share-logo {
+    font-size: 14px;
+}
+
+.highlight-content {
+    display: none;
+}
