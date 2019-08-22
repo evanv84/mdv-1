@@ -25,7 +25,7 @@ offset: 550,
 $('.card').each(function(index) {
     const currentCard = this;
     const tweenCard = new TimelineMax()
-    .to(currentCard, 0.65, {css: {transform: "translateY(0)", opacity: 1}}).delay(0.01 * index);
+    .to(currentCard, 0.55, {css: {transform: "translateY(0)", opacity: 1}, ease: Power2.easeOut}).delay(0.01 * index);
 
     const cardScene = new ScrollMagic.Scene({
         triggerElement: currentCard,
