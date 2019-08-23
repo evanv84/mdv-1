@@ -94,3 +94,26 @@ $slide-number: 4;
       }
   }
 }
+
+.dots-container {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba($color: #fff, $alpha: 0.75);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: all .35s;
+    &.active {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

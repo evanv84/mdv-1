@@ -3,7 +3,7 @@
     padding: 0 12px;
     h1 {
         width: 75%;
-        margin-bottom: 6px 0 17px;
+        margin: 6px 0 14px;
         font-size: 28px;
         line-height: 36px;
     }
@@ -37,16 +37,19 @@
 .post-description {
     font-size: 17px;
     line-height: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 }
 
 .post-more-block {
     background-color: white;
-    padding: 4px;
+    padding: 0 4px;
+    display: grid;
     h2 {
         font-size: 28px;
         line-height: 36px;
-        padding: 10px 0 18px;
+        margin-top: 15px;
+        margin-bottom: 17px;
+        padding: 0;
     }
 }
 
@@ -90,11 +93,11 @@
 
 .highlight {
     .text-wrapper {
-        padding: 12px;
+        padding: 0 12px;
         h2 {
             font-size: 28px;
             line-height: 36px;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
         p {
             font-size: 17px;
@@ -109,7 +112,7 @@
 
     .quote {
         background-color: #fff;
-        padding: 9px 24px 40px 36px;
+        padding: 15px 24px 17px 36px;
         .quote-text {
             font-size: 18px;
             line-height: 28px;

@@ -74,6 +74,31 @@ let currentSlideNumber = 0;
 let totalSlideNumber = $(".background").length;
 let delta;
 
+const Dots = {
+  renderDot: () => {
+    const container = $('.dots-container');
+    let slides = document.querySelectorAll('.about-content .background');
+
+    slides.forEach((item, index) => {
+      let active = index === 0 ? 'active' : "";  
+      
+      let dot = `
+          <div class="dot ${active}" data-index="${index}"></div>
+        `
+        container.append(dot);
+    })
+  },
+
+  setActive: (index) => {
+    $('.dot').removeClass('active');
+    $(`.dot[data-index="${index}"]`).addClass('active');
+  }
+}
+
+if ($('.about-cantent')) {
+  Dots.renderDot();
+}
+
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function wheelScroll(evt) {
   if (isFirefox) {
@@ -155,9 +180,12 @@ window.addEventListener("touchend", function(e) {
 function nextItem() {
   let $previousSlide = $(".background").eq(currentSlideNumber - 1);
   $previousSlide.removeClass("up-scroll").addClass("down-scroll");
+  Dots.setActive(currentSlideNumber);
 }
 
 function previousItem() {
   let $currentSlide = $(".background").eq(currentSlideNumber);
   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+  Dots.setActive(currentSlideNumber);
 }
+
