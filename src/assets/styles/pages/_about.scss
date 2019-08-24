@@ -4,8 +4,8 @@
 }
 
 // ------------- VARIABLES ------------- //
-$parallax-offset: 30vh;
-$content-offset: 40vh;
+$parallax-offset: 23vh;
+$content-offset: 30vh;
 $transition-speed: 1.2s;
 $slide-number: 4;
 
@@ -83,7 +83,7 @@ $slide-number: 4;
 }
 
 .background.down-scroll {
-  transform: translate3d(0,-(100vh + $parallax-offset),0);
+  transform: translate3d(0,-(134vh),0);
   .content-wrapper {
     transform: translateY($content-offset);
   }
@@ -116,4 +116,20 @@ $slide-number: 4;
       height: 10px;
     }
   }
+}
+
+.scroll-up {
+  width: 100%;
+  height: 45vh;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+
+.scroll-down {
+  width: 100%;
+  height: 45vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
 }

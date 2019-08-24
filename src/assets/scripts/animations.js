@@ -1,5 +1,5 @@
 import ScrollMagic from 'ScrollMagic';
-import { TimelineMax } from 'gsap';
+import { TimelineMax, Power4 } from 'gsap';
 import _ from 'loadsh';
 import 'animation.gsap';
 
@@ -25,7 +25,7 @@ offset: 550,
 $('.card').each(function(index) {
     const currentCard = this;
     const tweenCard = new TimelineMax()
-    .to(currentCard, 0.55, {css: {transform: "translateY(0)", opacity: 1}, ease: Power2.easeOut}).delay(0.01 * index);
+    .to(currentCard, 0.6, {css: {transform: "translateY(0)", opacity: 1}, ease: Sine.easeOut, y: -500}).delay(0.0075 * index);
 
     const cardScene = new ScrollMagic.Scene({
         triggerElement: currentCard,
@@ -189,3 +189,21 @@ function previousItem() {
   Dots.setActive(currentSlideNumber);
 }
 
+$('.scroll-up').click(function() {
+  //Up scroll
+  ticking = true;
+  if (currentSlideNumber !== 0) {
+    currentSlideNumber--;
+  }
+  previousItem();
+  slideDurationTimeout(slideDurationSetting);
+})
+
+$('.scroll-down').click(function() {
+  ticking = true;
+  if (currentSlideNumber !== totalSlideNumber - 1) {
+    currentSlideNumber++;
+    nextItem();
+  }
+  slideDurationTimeout(slideDurationSetting);
+})

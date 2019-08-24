@@ -16,11 +16,13 @@
     padding-bottom: 70px;
     transition: all .45s;
     opacity: 0;
-    transform: translateX(100%);
-
+    transform: scale3d(0.25, 0.25, 0.25) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    
     &.menu-slide-in {
         opacity: 1;
-        transform: translateX(0);
+        transform: scale3d(1, 1, 1) translateZ(0);
     }
 
     h2 {

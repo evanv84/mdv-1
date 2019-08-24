@@ -1,0 +1,9 @@
+mixin header(theme)
+    header#header(class=theme)
+        a.logo(href="/")
+            img(src="../assets/images/logo.svg", alt="my ducks' vision")
+        div.header-controls
+            a.header-link(href="#") EN
+            include ../components/menuBtn.pug
+        include ../components/menu.pug
+        include ../components/order.pug
