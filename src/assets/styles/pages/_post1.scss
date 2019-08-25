@@ -56,15 +56,16 @@
 
 .highlight-button {
     height: 44px;
-    padding: 4px;
+    padding: 4px 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     cursor: pointer;
     border-top: 1px solid rgba($color: black, $alpha: .1);
 
 
     i {
-        margin-right: 20px;
+        margin-right: 2px;
         font-size: 22px;
         transition: all .35s;
     }
@@ -72,6 +73,7 @@
     span {
         font-size: 17px;
         line-height: 24px;
+        font-weight: 500;
         i {
             font-size: 13px;
             font-style: normal;
@@ -97,7 +99,6 @@
 
 .highlight {
     .text-wrapper {
-        padding: 0px 12px;
         padding-top: 7px;
         h2 {
             font-size: 28px;

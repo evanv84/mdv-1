@@ -48,7 +48,7 @@ $slide-number: 4;
 }
 
 .about-content {
-    overflow: hidden;
+  overflow: hidden;
   &-wrapper {
     height: 100vh;
     display: flex;
@@ -96,7 +96,7 @@ $slide-number: 4;
 }
 
 .dots-container {
-  position: absolute;
+  position: fixed;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);

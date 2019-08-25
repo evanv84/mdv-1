@@ -57,9 +57,13 @@ $('.order-btn').click(function() {
 
 $('.highlight-button').click(function() {
     const parent = $(this).parent();
+    $(this).toggleClass('active') 
+    if ($(this).hasClass('active')) {
+      parent.find('.highlight-content').fadeIn(350);
+    } else {
+      parent.find('.highlight-content').hide();
+    }
     const icon = $(this).find('.fas').toggleClass('fa-angle-down fa-angle-up')
-    parent.find('.highlight-content').slideToggle(550);
-    $(this).toggleClass('active')
 })
 
 
