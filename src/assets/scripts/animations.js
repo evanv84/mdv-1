@@ -25,11 +25,11 @@ offset: 550,
 $('.card').each(function(index) {
     const currentCard = this;
     const tweenCard = new TimelineMax()
-    .to(currentCard, 0.6, {css: {transform: "translateY(0)", opacity: 1}, ease: Sine.easeOut, y: -500}).delay(0.0075 * index);
+    .to(currentCard, 0.5, {css: {transform: "translate3d(0, 0, 0)", opacity: 1}, ease: Sine.easeOut }).delay(0.00001 * index);
 
     const cardScene = new ScrollMagic.Scene({
         triggerElement: currentCard,
-        offset: -250,
+        offset: -380,
         triggerHook: 1,
     })
     .setTween(tweenCard)
@@ -58,7 +58,7 @@ $('.order-btn').click(function() {
 $('.highlight-button').click(function() {
     const parent = $(this).parent();
     const icon = $(this).find('.fas').toggleClass('fa-angle-down fa-angle-up')
-    parent.find('.highlight-content').slideToggle();
+    parent.find('.highlight-content').slideToggle(550);
     $(this).toggleClass('active')
 })
 
