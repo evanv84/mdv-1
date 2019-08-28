@@ -34,6 +34,10 @@ header {
             border-color: transparent;
         }
     }
+
+    .socials-row {
+        display: none;
+    }
 }
 
 .header-controls {
@@ -52,4 +56,44 @@ header {
 .hide {
     // position: fixed;
     top: -120px;
+}
+
+.header-list {
+    display: none;
+}
+
+@media screen and (min-width: 1260px) {
+    header {
+        padding: 12px 4px;
+        
+        .socials-row {
+            display: block;
+            width: auto;
+            margin-top: 0;
+            margin-right: 15px;
+        }
+    }
+
+    .header-list {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        li {
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                color: black;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .header-controls {
+        display: none;
+    }
 }

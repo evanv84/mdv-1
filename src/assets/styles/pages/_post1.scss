@@ -63,6 +63,12 @@
     cursor: pointer;
     border-top: 1px solid rgba($color: black, $alpha: .1);
 
+    .fas {
+        translate: all .35s;
+        &.active {
+            transform: rotate(180deg)
+        }
+    }
 
     i {
         margin-right: 2px;
@@ -102,7 +108,7 @@
         padding-top: 7px;
         h2 {
             font-size: 28px;
-            line-height: 24px;
+            line-height: 28px;
             margin-bottom: 14px;
         }
         p {

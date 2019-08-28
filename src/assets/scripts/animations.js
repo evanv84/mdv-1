@@ -63,7 +63,7 @@ $('.highlight-button').click(function() {
     } else {
       parent.find('.highlight-content').hide();
     }
-    const icon = $(this).find('.fas').toggleClass('fa-angle-down fa-angle-up')
+    const icon = $(this).find('.fas').toggleClass('active')
 })
 
 

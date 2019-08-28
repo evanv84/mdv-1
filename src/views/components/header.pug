@@ -6,5 +6,14 @@ header#header
     div.header-controls
         a.header-link(href="#") EN
         include menuBtn.pug
+    ul.header-list
+        li
+            a(href="#") О нас
+        li
+            a(href="#") Портфолио
+        li
+            a(href="#") Контакты
+    include ../mixins/socialsRow.pug
+    +socialsRow() 
     include menu.pug
     include order.pug

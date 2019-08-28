@@ -42,3 +42,28 @@ footer {
     line-height: 20px;
     height: 32px;
 }
+
+@media screen and (min-width: 1260px) {
+    footer {
+        .btn {
+            display: none;
+        }
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+    .socials-row {
+        display: none;
+        a {
+            font-size: 24px;
+        }
+    }
+
+    .copyright-text {
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 18px;
+    }
+}
