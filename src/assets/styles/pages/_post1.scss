@@ -157,3 +157,141 @@
 .highlight-content {
     display: none;
 }
+
+@media screen and (min-width: 1260px) {
+    .post-wrapper1 {
+        width: 1024px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 1px 90px;
+
+        .highlight .text-wrapper p, p {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 38px;
+        }
+
+        .title {
+            font-size: 62px;
+            line-height: 76px;
+            width: 100%;
+            text-align: center;
+            margin-top: 23px;
+            margin-bottom: 38px;
+        }
+
+        .post-socials {
+            position: fixed;
+            left: 30px;
+            bottom: 25px;
+            z-index: 100;
+        }
+        
+        .hero-content {
+            height: 767px;
+        }
+
+        .sub-title-text {
+            font-size: 18px;
+        }
+        
+        .highlight-button {
+            padding: 28px;
+        }
+
+        .highlight-button span {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        .highlight {
+            .quote {
+                position: relative;
+                margin-bottom: 38px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border-left: 6px solid rgba(0, 0, 0, 0.1);
+                    height: 95%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 15px;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    z-index: 2;
+                    background-image: url(../images/quote.jpg);
+                    background-position: center;
+                    width: 30px;
+                    height: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 3px;
+                }
+            }
+        }
+        .text-wrapper {
+            h2 {
+                font-size: 62px;
+                line-height: 76px;
+                margin-bottom: 38px;
+                margin-top: 20px;
+            }
+
+            .full-width {
+                width: 100%;
+                position: static;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            img {
+                margin: 58px 0;
+            }
+
+            .carousel {
+                margin: 58px 0; 
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .post-description {
+        font-size: 18px;
+        margin-bottom: 39px;
+        line-height: 28px;
+    }
+    .post-more-block {
+        padding: 1px 0;
+        display: block;
+        h2 {
+            font-size: 62px;
+            line-height: 76px;
+            text-align: center;
+            margin-bottom: 44px;
+        }
+        .row {
+            width: 50%;
+            display: inline-block;
+            overflow: hidden;
+            &:last-child {
+                display: none;
+            }
+            &:first-child {
+                width: calc(50% - 4px);
+                margin-right: 4px;
+            }
+
+            img {
+                transition: all 1.5s;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+}

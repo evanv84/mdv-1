@@ -7,10 +7,11 @@ block header
   include ../components/header.pug
 
 block content
+    button.btn.order-btn.fixed-btn(type="button") Заказать проект
     .post-wrapper1
         h1.title Теория заговора — I’m lovin’ it! 💖
         .post-socials
-          include ../components/postSocials.pug
+          <div data-mobile-view="true" data-share-size="30" data-like-text-enable="false" data-background-alpha="0.0" data-pid="1853681" data-mode="share" data-background-color="#ffffff" data-share-shape="round-rectangle" data-share-counter-size="12" data-icon-color="#ffffff" data-mobile-sn-ids="fb.vk.tw.ok.wh.tm.vb." data-text-color="#000000" data-buttons-color="#FFFFFF" data-counter-background-color="#ffffff" data-share-counter-type="disable" data-orientation="fixed-left" data-following-enable="false" data-sn-ids="fb.vk.tw.ok.tm." data-preview-mobile="false" data-selection-enable="false" data-exclude-show-more="false" data-share-style="1" data-counter-background-alpha="1.0" data-top-button="false" class="uptolike-buttons" ></div>
         p.sub-title-text Или как мы президенту России «скандальную правду» показывали.
         .hero-content.full-width
           iframe(width="100%" height="100%" src="https://www.youtube.com/embed/WizgSa1byUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)

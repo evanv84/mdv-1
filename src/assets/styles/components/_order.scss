@@ -4,22 +4,32 @@
     flex-direction: column;
     position: fixed;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     overflow: auto;
     z-index: 3;
-    background-color: #EF583A;
     top: 0;
     left: 0;
+    flex-wrap: wrap;
     color: white;
-    padding: 80px 25px 70px 25px;
-    padding-top: 80px;
-    padding-bottom: 70px;
     transition: all .45s;
     opacity: 0;
     transform: scale3d(0.25, 0.25, 0.25) translateZ(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
     pointer-events: none;
+
+    .content {
+        background-color: #EF583A;
+        padding: 80px 25px 70px 25px;
+        padding-top: 80px;
+        padding-bottom: 70px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .image-block {
+        display: none;
+    }
 
     &.menu-slide-in {
         opacity: 1;
@@ -38,5 +48,69 @@
         line-height: 24px;
         text-align: justify;
         margin-bottom: 32px;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .order-block {
+        .content {
+            width: 80%;
+            position: relative;
+            padding: 80px 12%;
+            height: 100vh;
+        }
+
+        h2 {
+            font-size: 41px;
+            line-height: 130%;
+            margin-bottom: 28px;
+        }
+
+        .image-block {
+            width: 20%;
+            height: 100vh;
+            display: block;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .callback-form {
+            form {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .form-group {
+                width: 100%;
+                textarea {
+                    height: 102px;
+                }
+            }
+            .checkbox-group {
+                width: 50%;
+            }
+            .btn {
+                width: 50%;
+            }
+        }
+
+        .close {
+            width: 52px;
+            height: 52px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            position: absolute;
+            top: 23px;
+            right: 39px;
+            i {
+                font-size: 20px;
+            }
+        }
     }
 }

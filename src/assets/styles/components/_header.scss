@@ -88,12 +88,15 @@ header {
 
             a {
                 color: black;
-                font-size: 14px;
+                font-size: 28px;
+                font-weight: 500;
             }
         }
     }
 
     .header-controls {
-        display: none;
+       .menu {
+           display: none;
+       }
     }
 }

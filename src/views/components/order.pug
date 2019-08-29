@@ -1,15 +1,20 @@
 .order-block
-    h2 Заказать проект
-    p Придумываем и воплощаем в жизнь проекты любых масштабов. Создаём новых героев новых медиа. Дружим с блогерами, звёздами, политиками, инфлюенсерами и трендсеттерами. Обеспечиваем миллионы просмотров, способствуем попаданию в СМИ, в ЦА и на страницы мировой истории. Работаем в онлайн и за его пределами, громко и тихо, с выгодой для себя и клиентов. Поехали!
-    .callback-form.white
-        form(action="")
-        .form-group
-            input.texted-input(type="text" required placeholder="Имя")
-        .form-group
-            input.texted-input(type="text" required placeholder="Email")
-        .form-group
-            textarea.texted-input(type="text" required placeholder="Сообщение")
-        .form-group
-            input.checkbox#check(type="checkbox" checked)
-            label.checkbox-label(for="check") Нажимая на кнопку «Отправить», я принимаю условия #[a(href="") Пользовательского соглашения и даю согласие на обработку моих персональных данных]
-        button.btn.white Отправить
+    .content
+        h2 Заказать проект
+        p Придумываем и воплощаем в жизнь проекты любых масштабов. Создаём новых героев новых медиа. Дружим с блогерами, звёздами, политиками, инфлюенсерами и трендсеттерами. Обеспечиваем миллионы просмотров, способствуем попаданию в СМИ, в ЦА и на страницы мировой истории. Работаем в онлайн и за его пределами, громко и тихо, с выгодой для себя и клиентов. Поехали!
+        .callback-form.white
+            form(action="")
+                .form-group
+                    input.texted-input(type="text" required placeholder="Имя")
+                .form-group
+                    input.texted-input(type="text" required placeholder="Email")
+                .form-group
+                    textarea.texted-input(type="text" required placeholder="Сообщение")
+                .form-group.checkbox-group
+                    input.checkbox#check(type="checkbox" checked)
+                    label.checkbox-label(for="check") Нажимая на кнопку «Отправить», я принимаю условия #[a(href="") Пользовательского соглашения и даю согласие на обработку моих персональных данных]
+                button.btn.white Отправить
+        button(type="button").close
+            i.fas.fa-times
+    .image-block
+        img(src="assets/images/order-bg.jpg", alt="")

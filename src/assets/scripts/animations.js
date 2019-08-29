@@ -55,6 +55,10 @@ $('.order-btn').click(function() {
     $('#header, #menuBtn').addClass('menu-opened')
 })
 
+$('.close').click(function() {
+  $('.order-block').removeClass('menu-slide-in');
+})
+
 $('.highlight-button').click(function() {
     const parent = $(this).parent();
     $(this).toggleClass('active') 
