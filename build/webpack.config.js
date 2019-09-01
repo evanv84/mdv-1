@@ -87,7 +87,10 @@ module.exports = env => {
           test: /\.pug$/,
           use: [
             {
-              loader: 'pug-loader'
+              loader: 'pug-loader',
+              options: {
+                pretty: true,
+              }
             }
           ]
         },
@@ -96,7 +99,6 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 3000,
-            name: '/assets/images/[name].[hash:7].[ext]'
           }
         },
         {

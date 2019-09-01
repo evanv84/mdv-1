@@ -133,3 +133,13 @@ $slide-number: 4;
   bottom: 0;
   z-index: 5;
 }
+
+@media screen and (orientation: landscape) {
+  .background.up-scroll{
+    transform: translate3d(0,-13.5vh,0);
+  }
+
+  .background:first-child {
+    transform: translateY(-13.5vh);
+  }
+}

@@ -55,8 +55,13 @@ $('.order-btn').click(function() {
     $('#header, #menuBtn').addClass('menu-opened')
 })
 
-$('.close').click(function() {
+$('.order-block .close').click(function() {
   $('.order-block').removeClass('menu-slide-in');
+})
+
+
+$('.success-message .close').click(function() {
+  $('.success-message').hide();
 })
 
 $('.highlight-button').click(function() {

@@ -22,5 +22,12 @@ $(document).ready(function() {
         h.appendChild(s);
     }})(window,document);
 
+    $('.callback-form form').submit(function(e) {
+        event.preventDefault();
+        document.querySelector('.callback-form form').reset();
+        $('.order-block').removeClass('menu-slide-in')
+        $('.success-message').addClass('active')
+    })
+
 })
 

@@ -1,13 +1,20 @@
-.post-wrapper1 {
+.post-title {
+    width: 75%;
+    margin: 6px 0 14px;
+    font-size: 28px;
+    line-height: 36px;
+    padding: 0 12px;
+}
+
+.sub-title-text {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 0 12px;
+}
+
+.post-wrapper {
     flex: 1;
     padding: 0 12px;
-    h1 {
-        width: 75%;
-        margin: 6px 0 14px;
-        font-size: 28px;
-        line-height: 36px;
-        padding: 0;
-    }
 
     .hero-content {
         margin-top: 17px;
@@ -19,10 +26,12 @@
             object-fit: cover;
         }
     }
+}
 
-    .sub-title-text {
-        font-size: 17px;
-        line-height: 24px;
+.carousel {
+    &.full-width {
+        width: 101vw;
+        margin-left: -51vw;
     }
 }
 
@@ -93,7 +102,8 @@
             .highlight-button {
                 border-bottom: 1px solid rgba($color: black, $alpha: .1);
                 &.active {
-                    border-bottom: none;
+                    border-bottom: 1px solid;
+                    border-bottom-color: transparent;
                 }
             }
             .highlight-content {
@@ -159,24 +169,35 @@
 }
 
 @media screen and (min-width: 1260px) {
-    .post-wrapper1 {
+    .post-title {
+        font-size: 62px;
+        line-height: 76px;
+        width: 100%;
+        text-align: center;
+        margin-top: 23px;
+        margin-bottom: 38px;
+    }
+
+    .sub-title-text {
+        font-size: 18px;
+        margin-bottom: 38px;
+        text-align: center;
+    }
+
+    .post-wrapper {
         width: 1024px;
         margin: 0 auto;
         background-color: #fff;
         padding: 1px 90px;
+        padding-bottom: 0;
+        
+        .orange {
+            background-color: #fff;
+        }
 
         .highlight .text-wrapper p, p {
             font-size: 18px;
             line-height: 28px;
-            margin-bottom: 38px;
-        }
-
-        .title {
-            font-size: 62px;
-            line-height: 76px;
-            width: 100%;
-            text-align: center;
-            margin-top: 23px;
             margin-bottom: 38px;
         }
 
@@ -185,14 +206,13 @@
             left: 30px;
             bottom: 25px;
             z-index: 100;
+            display: none;
         }
         
         .hero-content {
             height: 767px;
-        }
-
-        .sub-title-text {
-            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 38px;
         }
         
         .highlight-button {
@@ -246,7 +266,7 @@
             }
 
             img {
-                margin: 58px 0;
+                margin: 38px 0;
             }
 
             .carousel {
@@ -263,18 +283,21 @@
         line-height: 28px;
     }
     .post-more-block {
-        padding: 1px 0;
         display: block;
+        background-color: transparent;
+        padding: 0;
         h2 {
             font-size: 62px;
             line-height: 76px;
             text-align: center;
-            margin-bottom: 44px;
+            width: 1024px;
+            margin: 0 auto;
+            padding: 38px 0;
+            background-color: #fff;
         }
         .row {
             width: 50%;
             display: inline-block;
-            overflow: hidden;
             &:last-child {
                 display: none;
             }
@@ -282,16 +305,25 @@
                 width: calc(50% - 4px);
                 margin-right: 4px;
             }
+            
+            .card {
+                overflow: hidden;
+            }
 
             img {
-                transition: all 1.5s;
+                height: 431px;
+                transition: transform .25s cubic-bezier(.445,.05,.55,.95);
             }
 
             &:hover {
                 img {
-                    transform: scale(1.15);
+                    transform: scale(1.07);
                 }
             }
+        }
+        .row-container {
+            display: flex;
+            justify-content: space-between;
         }
     }
 }

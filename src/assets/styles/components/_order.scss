@@ -18,13 +18,20 @@
     -webkit-font-smoothing: antialiased;
     pointer-events: none;
 
+    .close {
+        display: none;
+    }
+
     .content {
         background-color: #EF583A;
         padding: 80px 25px 70px 25px;
         padding-top: 80px;
         padding-bottom: 70px;
-        height: 100%;
         width: 100%;
+
+        input::placeholder, textarea::placeholder {
+            color: rgba($color: #fff, $alpha: 0.55)
+        }
     }
 
     .image-block {
@@ -53,6 +60,7 @@
 
 @media screen and (min-width: 1260px) {
     .order-block {
+        flex-direction: row;
         .content {
             width: 80%;
             position: relative;

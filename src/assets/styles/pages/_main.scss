@@ -65,6 +65,11 @@
     -webkit-perspective: 1000;
     backface-visibility: hidden;
     perspective: 1000;
+
+    .blackout {
+        display: none;
+    }
+
     img {
         width: 100%;
         height: 100%;
@@ -127,14 +132,22 @@
         bottom: 14px;
         right: 12px;
         width: 262px;
-        background-color:  #000;
+        background-color:#E14B2D;
+        border-color: #E14B2D;
         z-index: 4;
         color: #fff;
+        cursor: pointer;
+        transition: all .35s;
+        &:hover {
+            background-color: transparent;
+            color: #000;
+        }
     }
 
     .card {
         position: relative;
         .blackout {
+            display: block;
             position: absolute;
             width: 100%;
             height: 100%;
