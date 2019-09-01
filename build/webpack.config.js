@@ -22,7 +22,7 @@ module.exports = env => {
     output: {
       path: path.resolve(__dirname, '../dist'),
       publicPath: '/',
-      filename: 'assets/js/[name].[hash:7].bundle.js'
+      filename: 'assets/js/[name].bundle.js'
     },
     devServer: {
       contentBase: path.resolve(__dirname, '../src'),
@@ -133,7 +133,7 @@ module.exports = env => {
           vendors: false,
           // vendor chunk
           vendor: {
-            filename: 'assets/js/vendor.[hash:7].bundle.js',
+            filename: 'assets/js/vendor.bundle.js',
             // sync + async chunks
             chunks: 'all',
             // import file path containing node_modules
@@ -152,7 +152,7 @@ module.exports = env => {
         { from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
       ]),
       new MiniCssExtractPlugin({
-        filename: 'assets/css/[name].[hash:7].bundle.css',
+        filename: 'assets/css/[name].bundle.css',
         chunkFilename: '[id].css',
       }),
 
