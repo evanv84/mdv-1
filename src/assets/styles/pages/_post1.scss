@@ -222,7 +222,7 @@
         }
         
         .highlight-button {
-            padding: 28px;
+            padding: 28px 0;
         }
 
         .highlight-button span {
@@ -233,6 +233,7 @@
             .quote {
                 position: relative;
                 margin-bottom: 38px;
+                padding-left: 44px;
                 &::before {
                     content: '';
                     position: absolute;
@@ -254,6 +255,17 @@
                     transform: translateY(-50%);
                     left: 3px;
                 }
+                
+                .quote-text {
+                    margin-bottom: 30px;
+                }
+
+                .quote-link {
+                    font-size: 20px;
+                    display: block;
+                    margin-bottom: 0;
+                    text-align: right;
+                }
             }
         }
         .text-wrapper {
@@ -262,6 +274,7 @@
                 line-height: 76px;
                 margin-bottom: 38px;
                 margin-top: 20px;
+                font-weight: 400;
             }
 
             .full-width {
@@ -279,6 +292,18 @@
                 margin: 58px 0; 
                 img {
                     margin: 0;
+                }
+
+                .owl-nav {
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: center;
+                    i {
+                        font-size: 22px;
+                        &:first-child {
+                            margin-right: 20px;
+                        }
+                    }
                 }
             }
         }
@@ -298,7 +323,7 @@
             text-align: center;
             width: 1024px;
             margin: 0 auto;
-            padding: 38px 0;
+            padding: 68px 0 38px 0;
             background-color: #fff;
         }
         .row {
@@ -314,8 +339,8 @@
             
             .card {
                 overflow: hidden;
+                height: 450px;
             }
-
             img {
                 height: 450px;
                 transition: transform .25s cubic-bezier(.445,.05,.55,.95);

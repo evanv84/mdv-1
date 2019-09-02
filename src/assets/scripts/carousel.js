@@ -6,4 +6,6 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     margin:4,
     items: 1.15,
+    nav: window.matchMedia("(min-width: 1100px)").matches,
+    navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>']
 })

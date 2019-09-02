@@ -22,14 +22,18 @@ offset: 550,
     
 })
 
+
+const delay = window.matchMedia("(min-width: 1100px)").matches ? 0.01 : 0.00001;
+const offset = window.matchMedia("(min-width: 1100px)").matches ? -290 : -380;
+
 $('.card').each(function(index) {
     const currentCard = this;
     const tweenCard = new TimelineMax()
-    .to(currentCard, 0.5, {css: {transform: "translate3d(0, 0, 0)", opacity: 1}, ease: Sine.easeOut }).delay(0.00001 * index);
+    .to(currentCard, 0.5, {css: {transform: "translate3d(0, 0, 0)", opacity: 1}, ease: Sine.easeOut }).delay(delay * index);
 
     const cardScene = new ScrollMagic.Scene({
         triggerElement: currentCard,
-        offset: -380,
+        offset,
         triggerHook: 1,
     })
     .setTween(tweenCard)
