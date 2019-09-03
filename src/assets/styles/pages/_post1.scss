@@ -16,6 +16,10 @@
     flex: 1;
     padding: 0 12px;
 
+    .menu {
+        display: none;
+    }
+
     .hero-content {
         margin-top: 17px;
         margin-bottom: 17px;
@@ -132,9 +136,35 @@
         }
     }
 
+    .utl-mobile .uptl_container-share {
+        z-index: 4!important;
+    }
+
     .quote {
         background-color: #fff;
         padding: 15px 24px 17px 36px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            border-left: 6px solid rgba(0, 0, 0, 0.1);
+            height: 95%;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            background-image: url(../images/quote.jpg);
+            background-position: center;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 3px;
+        }
         .quote-text {
             font-size: 17px;
             line-height: 28px;
@@ -197,6 +227,10 @@
         padding: 1px 90px;
         padding-bottom: 0;
         
+        .menu {
+            display: block;
+        }
+
         .orange {
             background-color: #fff;
         }
@@ -298,6 +332,9 @@
                     margin-top: 15px;
                     display: flex;
                     justify-content: center;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%); 
                     i {
                         font-size: 22px;
                         &:first-child {
@@ -333,16 +370,14 @@
                 display: none;
             }
             &:first-child {
-                width: calc(50% - 4px);
                 margin-right: 4px;
             }
             
             .card {
                 overflow: hidden;
-                height: 450px;
+                height: 100%;
             }
             img {
-                height: 450px;
                 transition: transform .25s cubic-bezier(.445,.05,.55,.95);
             }
 
@@ -355,6 +390,7 @@
         .row-container {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 4px;
         }
     }
 }

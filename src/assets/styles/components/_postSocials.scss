@@ -1,12 +1,13 @@
 $white:#fff;
-.menu{
-    z-index:999;
+.menu-soc {
+    z-index:1;
     position:fixed;
     padding:0;
     margin:0;
     list-style-type:none;
     background-color: transparent;
     border-color: transparent;
+    display: block;
     .share{
       i.fab, i.fa{
         height:50px;

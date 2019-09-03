@@ -51,6 +51,10 @@ li {
   padding: 0 4px;
 }
 
+.utl-mobile .uptl_container-share {
+  z-index: 3!important;
+}
+
 @media screen and (min-width: 1260px) {
   body{
     padding-top: 66px; /* height of header */
