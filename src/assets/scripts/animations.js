@@ -22,6 +22,16 @@ offset: 550,
     
 })
 
+const postSoc = new ScrollMagic.Scene({
+  triggerElement: 'post-wrapper',
+  offset: document.querySelector('.hero-content').offsetHeight + 106,
+})
+.on("leave", function () {
+  console.log('111');
+  $('.menu-soc').toggleClass('active');
+})
+.setClassToggle('.menu-soc', 'active')
+.addTo(controller);
 
 const delay = window.matchMedia("(min-width: 1100px)").matches ? 0.01 : 0.00001;
 const offset = window.matchMedia("(min-width: 1100px)").matches ? -290 : -380;

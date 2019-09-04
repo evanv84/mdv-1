@@ -1,7 +1,10 @@
 mixin header(theme)
     header#header(class=theme)
         a.logo(href="/")
-            img(src="../assets/images/logo.svg", alt="my ducks' vision")
+            if theme
+                img(src="../assets/images/logo_white.svg", alt="my ducks' vision")
+            else 
+                img(src="../assets/images/logo.svg", alt="my ducks' vision")
         div.header-controls
             a.header-link(href="#") EN
             include ../components/menuBtn.pug

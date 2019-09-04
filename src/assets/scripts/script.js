@@ -29,5 +29,7 @@ $(document).ready(function() {
         $('.success-message').addClass('active')
     })
 
+    if (window.location.hash === '#order') $('.order-btn').click(); 
+
 })
 

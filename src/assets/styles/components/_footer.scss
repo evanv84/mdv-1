@@ -52,8 +52,35 @@ footer {
     }
 
     .socials-row {
+
         a {
             font-size: 28px;
+            .fab {
+                transition: all .35s;
+                &:hover {
+                    &.fa-youtube {
+                        color: #cd201f;
+                    }
+                    &.fa-facebook-f {
+                        color: #3b5999;
+                    }
+                    &.fa-telegram-plane {
+                        color: #0088cc;
+                    }
+                    &.fa-vk {
+                        color: #4c75a3;
+                    }
+                    &.fa-instagram {
+                        color: #e4405f;
+                    }
+                    &.fa-twitter {
+                        color: #55acee;
+                    }
+                    &.fa-odnoklassniki {
+                        color: #ed812b;
+                    }
+                }
+            }
         }
     }
 }

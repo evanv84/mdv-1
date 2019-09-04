@@ -36,6 +36,9 @@
                 }
             }
         }
+        &.three {
+            min-height: 254px;
+        }
         &.grid {
             width: 100%;
             height: 100%;
@@ -85,6 +88,18 @@
 
 .fixed-btn {
     display: none;
+}
+
+@media screen and (orientation: landscape) {
+    .main-wrapper {
+        .row {
+            &:first-child {
+                img {
+                    min-height: 441px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1260px) {
