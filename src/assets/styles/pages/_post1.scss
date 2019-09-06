@@ -1,6 +1,6 @@
 .post-title {
     width: 75%;
-    margin: 6px 0 14px;
+    margin: 14px 0 14px;
     font-size: 28px;
     line-height: 36px;
     padding: 0 12px;
@@ -148,7 +148,7 @@
             content: '';
             position: absolute;
             border-left: 6px solid rgba(0, 0, 0, 0.1);
-            height: 95%;
+            height: 97%;
             top: 50%;
             transform: translateY(-50%);
             left: 15px;
@@ -177,6 +177,8 @@
             font-size: 17px;
             line-height: 28px;
             margin-bottom: 22px;
+            display: block;
+            text-align: right;
         }
     }
 }
@@ -198,9 +200,9 @@
     display: none;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 769px) {
     .post-wrapper .hero-content {
-        height: 420px;
+        height: 420px!important;
     }
 }
 
@@ -250,7 +252,7 @@
         }
         
         .hero-content {
-            height: 767px;
+            height: 767px!important;
             margin-top: 0;
             margin-bottom: 38px;
         }

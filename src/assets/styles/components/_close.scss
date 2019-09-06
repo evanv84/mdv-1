@@ -1,0 +1,45 @@
+.close {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: transparent;
+    border-color: transparent;
+
+    .button-content {
+        width: 28px;
+        height: 2px;
+        display: inline-block;
+        position: relative;
+        transition: all .35s;
+    
+        span {
+            width: 28px;
+            height: 2px;
+            background-color: #fff;
+            display: inherit;
+            transition: all .35s;
+            transform: scale(0);
+            transform-origin: 50% 50%;
+        }
+    
+        &:after, &:before {
+            content: "";
+            width: 28px;
+            height: 2px;
+            background-color: #fff;
+            display: block;
+            position: absolute;
+            transition: all .35s;
+        }
+        &:after {
+            top: -6px;
+            transform: rotate(45deg) translate(4px, 4px);
+        }
+        &:before {
+            bottom: -6px;
+            transform: rotate(-45deg) translate(5px,-4px);
+        }
+    }    
+}

@@ -1,7 +1,4 @@
 $(document).ready(function() {
-    if ($('.about-content')[0]) {
-        $('body, html').css('position', 'fixed');
-    }
 
     // $('.post-socials').jsSocials({
     //     shares: [
@@ -29,7 +26,8 @@ $(document).ready(function() {
         $('.success-message').addClass('active')
     })
 
-    if (window.location.hash === '#order') $('.order-btn').click(); 
+    if (window.location.hash === '#order') $('.order-btn').click();
+    if (window.location.hash === '#about') $('.about-link').click();
 
 })
 

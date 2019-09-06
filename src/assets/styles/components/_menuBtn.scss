@@ -8,6 +8,8 @@
     height: 40px;
 
     &.menu-opened {
+        background-color: transparent;
+        border-color: transparent;
         .button-content {
             span {
                 transform: scale(0);

@@ -22,16 +22,26 @@ offset: 550,
     
 })
 
-const postSoc = new ScrollMagic.Scene({
-  triggerElement: 'post-wrapper',
-  offset: document.querySelector('.hero-content').offsetHeight + 106,
-})
-.on("leave", function () {
-  console.log('111');
-  $('.menu-soc').toggleClass('active');
-})
-.setClassToggle('.menu-soc', 'active')
-.addTo(controller);
+function getCurrentPos(wrapper, hero) {
+  const heroCalc = hero ? hero : document.querySelector('.hero-content').offsetHeight
+  const wrapperCalc = wrapper ? wrapper : document.querySelector('.post-wrapper').offsetHeight
+  return wrapperCalc - heroCalc + 100;
+}
+
+if ($('.post-wrapper')[0]) {
+  const hero = document.querySelector('.hero-content').offsetHeight
+  const wrapper = document.querySelector('.post-wrapper').offsetHeight
+  const postSoc = new ScrollMagic.Scene({
+    triggerElement: 'post-wrapper',
+    offset: document.querySelector('.hero-content').offsetHeight + 170,
+    duration: getCurrentPos,
+  })
+  .on('leave', function() {
+    $('.menu-soc').removeClass('actiive')
+  })
+  .setClassToggle('.menu-soc', 'active')
+  .addTo(controller);
+}
 
 const delay = window.matchMedia("(min-width: 1100px)").matches ? 0.01 : 0.00001;
 const offset = window.matchMedia("(min-width: 1100px)").matches ? -290 : -380;
@@ -66,7 +76,6 @@ $('#menuBtn').click(function() {
 
 $('.order-btn').click(function() {
     $('.order-block').addClass('menu-slide-in')
-    $('#header, #menuBtn').addClass('menu-opened')
 })
 
 $('.order-block .close').click(function() {
@@ -82,9 +91,13 @@ $('.highlight-button').click(function() {
     const parent = $(this).parent();
     $(this).toggleClass('active') 
     if ($(this).hasClass('active')) {
-      parent.find('.highlight-content').fadeIn(350);
+      parent.find('.highlight-content').fadeIn(350, function() {
+        getCurrentPos();
+      });
     } else {
-      parent.find('.highlight-content').hide();
+      parent.find('.highlight-content').hide(function() {
+        getCurrentPos();
+      });
     }
     const icon = $(this).find('.fas').toggleClass('active')
 })
@@ -233,4 +246,12 @@ $('.scroll-down').click(function() {
     nextItem();
   }
   slideDurationTimeout(slideDurationSetting);
+})
+
+$('.about-link').click(function() {
+  $('.about-component').addClass('active');
+})
+
+$('.about-component .close').click(function() {
+  $('.about-component').removeClass('active');
 })
