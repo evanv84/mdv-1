@@ -1,4 +1,9 @@
 .order-block
+    a.modal-logo(href="")
+        img(src="assets/images/logo_white.svg", alt="")
+    .modal-left-row
+        a(href="") EN
+        include close.pug
     .content
         img.order-logo(src="assets/images/logo_white.svg", alt="")
         h2 Заказать проект
@@ -10,13 +15,13 @@
                 .form-group
                     input.texted-input(type="email" required placeholder="Email")
                 .form-group
-                    textarea.texted-input(type="text" placeholder="Сообщение")
+                    textarea.texted-input(type="text" required placeholder="Сообщение")
                 //- .form-group.checkbox-group
                 //-     input.checkbox#check(type="checkbox" checked)
                 //-     label.checkbox-label(for="check") Нажимая на кнопку «Отправить», я принимаю условия #[a(href="") Пользовательского соглашения и даю согласие на обработку моих персональных данных]
                 button.btn.white Отправить
                     .mask
-        button(type="button").close
+        button(type="button").close.big
             i.fas.fa-times
     .image-block
         img(src="assets/images/order-bg.jpg", alt="")

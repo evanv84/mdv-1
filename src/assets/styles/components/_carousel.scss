@@ -4,6 +4,7 @@
     .item {
         width: 100%;
         height: 211px;
+        touch-action: pan-x;
         img {
             width: 100%;
             height: 100%;

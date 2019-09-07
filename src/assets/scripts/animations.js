@@ -76,10 +76,12 @@ $('#menuBtn').click(function() {
 
 $('.order-btn').click(function() {
     $('.order-block').addClass('menu-slide-in')
+    $('body').css('overflow', 'hidden')
 })
 
 $('.order-block .close').click(function() {
   $('.order-block').removeClass('menu-slide-in');
+  $('body').css('overflow', 'auto');
 })
 
 
@@ -95,7 +97,7 @@ $('.highlight-button').click(function() {
         getCurrentPos();
       });
     } else {
-      parent.find('.highlight-content').hide(function() {
+      parent.find('.highlight-content').hide(0, function() {
         getCurrentPos();
       });
     }
@@ -250,8 +252,10 @@ $('.scroll-down').click(function() {
 
 $('.about-link').click(function() {
   $('.about-component').addClass('active');
+  $('body').css('overflow', 'hidden');
 })
 
 $('.about-component .close').click(function() {
   $('.about-component').removeClass('active');
+  $('body').css('overflow', 'auto');
 })

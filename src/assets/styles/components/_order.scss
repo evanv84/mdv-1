@@ -19,28 +19,14 @@
     pointer-events: none;
     background-color: #EF583A;
 
-    .close {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        position: absolute;
-        top: 4px;
-        right: 4px;
-        i {
-            font-size: 20px;
-        }
-    }
-
     .order-logo {
         position: absolute;
         left: 4px;
         top: 8px;
     }
-
+    .close.big {
+        display: none;
+    }
     .content {
         background-color: #EF583A;
         padding: 80px 4px 70px;
@@ -107,7 +93,7 @@
             &:hover {
                 .mask {
                     background-color: #fff;
-                    transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+                    transform: translate3d(155%, -100px, 0) rotate3d(0, 0, 1, 90deg);
                 }
             }
         }
@@ -187,19 +173,21 @@
         }
 
         .close {
-            width: 52px;
-            height: 52px;
-            background-color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            i {
-                font-size: 20px;
+            &.big{
+                width: 52px;
+                height: 52px;
+                background-color: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                i {
+                    font-size: 20px;
+                }
             }
         }
     }
