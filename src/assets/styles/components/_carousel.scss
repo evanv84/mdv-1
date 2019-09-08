@@ -1,6 +1,13 @@
 .carousel {
     margin: 17px 0;
     margin-bottom: 20px;
+
+    .owl-item {
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
     .item {
         width: 100%;
         height: 211px;

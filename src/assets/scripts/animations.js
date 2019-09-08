@@ -64,11 +64,13 @@ $('.card').each(function(index) {
 $('#menuBtn').click(function() {
     if (!$('.order-block').hasClass('menu-slide-in')) {
         $('#menu').toggleClass('menu-slide-in');
+        $('body, html').css('overflow', 'hidden');
         $('#header, #menuBtn').toggleClass('menu-opened')
     }
 
     if (!$('#menu').hasClass('menu-slide-in')) {
-        $('#header, #menuBtn').removeClass('menu-opened')
+        $('#header, #menuBtn').removeClass('menu-opened');
+        $('body, html').css('overflow', 'auto');
     }
     
     $('.order-block').removeClass('menu-slide-in');
@@ -76,17 +78,17 @@ $('#menuBtn').click(function() {
 
 $('.order-btn').click(function() {
     $('.order-block').addClass('menu-slide-in')
-    $('body').css('overflow', 'hidden')
+    $('body, html').css('overflow', 'hidden')
 })
 
 $('.order-block .close').click(function() {
   $('.order-block').removeClass('menu-slide-in');
-  $('body').css('overflow', 'auto');
+  $('body, html').css('overflow', 'auto');
 })
 
 
 $('.success-message .close').click(function() {
-  $('.success-message').hide();
+  $('.success-message').removeClass('active')
 })
 
 $('.highlight-button').click(function() {
@@ -252,10 +254,10 @@ $('.scroll-down').click(function() {
 
 $('.about-link').click(function() {
   $('.about-component').addClass('active');
-  $('body').css('overflow', 'hidden');
+  $('body, html').css('overflow', 'hidden');
 })
 
 $('.about-component .close').click(function() {
   $('.about-component').removeClass('active');
-  $('body').css('overflow', 'auto');
+  $('body, html').css('overflow', 'auto');
 })

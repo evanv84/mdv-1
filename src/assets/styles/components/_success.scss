@@ -24,6 +24,11 @@
         position: absolute;
         top: 15px;
         right: 15px;
+        .button-content { 
+            &:after, &:before {
+                background-color: #000;
+            }
+        }
     }
 
     h2 {

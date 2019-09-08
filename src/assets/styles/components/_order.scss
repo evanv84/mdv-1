@@ -24,9 +24,11 @@
         left: 4px;
         top: 8px;
     }
+    
     .close.big {
         display: none;
     }
+
     .content {
         background-color: #EF583A;
         padding: 80px 4px 70px;
@@ -114,6 +116,10 @@
     .order-block {
         overflow: initial;
         flex-direction: row;
+
+        .modal-logo, .modal-left-row {
+            display: none;
+        }
 
         .order-logo {
             position: absolute;

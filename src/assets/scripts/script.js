@@ -29,5 +29,43 @@ $(document).ready(function() {
     if (window.location.hash === '#order') $('.order-btn').click();
     if (window.location.hash === '#about') $('.about-link').click();
 
+
+    var touch = {};
+
+    window.onload = function () {
+        "use strict";
+        document.body.addEventListener("touchstart", touchHandler);
+        document.body.addEventListener("touchend", touchHandler);
+    };
+
+    function touchHandler(e) {
+        "use strict";
+
+        var el = e.target;
+        if (el.parentNode.className === "item") {
+            if (e.type === "touchstart") {
+                touch.startX = e.changedTouches[0].screenX;
+                touch.startY = e.changedTouches[0].screenY;
+            } else {
+                touch.endX = e.changedTouches[0].screenX;
+                touch.endY = e.changedTouches[0].screenY;
+
+                touch.lenX = Math.abs(touch.endX - touch.startX);
+                touch.lenY = Math.abs(touch.endY - touch.startY);
+
+                if (touch.lenY < 20) {
+                    // disable scroll
+                    document.body.style.overflowY = "hidden";
+                } else {
+                    // enable scroll if swipe was not intended
+                    document.body.style.overflowY = "scroll";
+                }
+            }
+        } else {
+            // keep scroll enabled if touch is outside the image slider 
+            document.body.style.overflowY = "scroll";
+        }
+    }
+
 })
 

@@ -21,17 +21,7 @@ $slide-number: 4;
   width: 100%;
   transform: translateY($parallax-offset);
   @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,.3);
-  }
+
   &:first-child {
     transform: translateY(-1.5vh);
     .content-wrapper {
@@ -149,7 +139,7 @@ $slide-number: 4;
     color: #fff
   }
   h2 {
-    font-size: 18vw;
+    font-size: 36vw;
     line-height: 100%;
     margin-bottom: 28px;
   }
@@ -227,7 +217,6 @@ $slide-number: 4;
     right: 24px
   }
 
-
   .about-component {
     .modal-logo {
       top: 12px;
@@ -269,7 +258,7 @@ $slide-number: 4;
     }
 
     h2 {
-      font-size: 18vw;
+      font-size: 19vw;
       line-height: 100%;
       margin-bottom: 14px;
     }
@@ -286,27 +275,29 @@ $slide-number: 4;
       position: relative;
       display: inline-block;
       img {
-        width: auto;
+        width: 33px;
       }
       &:after {
         content: '';
         position: absolute;
         top: 50%;
-        left: 10%;
         transform: translateY(-50%);
         background-color: #000;
         width: 35%;
         height: 1px;
+        max-width: 324px;
+        left: 23%;
       }
       &:before {
         content: '';
         position: absolute;
         top: 50%;
-        right: 10%;
         transform: translateY(-50%);
         background-color: #000;
         width: 35%;
         height: 1px;
+        max-width: 324px;
+        right: 23%;
       }
     }
   }

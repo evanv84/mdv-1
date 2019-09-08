@@ -314,7 +314,9 @@
 
             .full-width {
                 width: 100%;
-                position: static;
+                position: relative;
+                left: 0;
+                top: 0;
                 margin-left: 0;
                 margin-right: 0;
             }
@@ -330,17 +332,23 @@
                 }
 
                 .owl-nav {
-                    margin-top: 15px;
-                    display: flex;
-                    justify-content: center;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%); 
                     i {
                         font-size: 22px;
                         &:first-child {
                             margin-right: 20px;
                         }
+                    }
+                    .owl-prev {
+                        position: absolute;
+                        left: -55px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    .owl-next {
+                        position: absolute;
+                        right: -74px;
+                        top: 50%;
+                        transform: translateY(-50%);
                     }
                 }
             }
