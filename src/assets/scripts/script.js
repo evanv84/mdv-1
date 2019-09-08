@@ -19,23 +19,15 @@ $(document).ready(function() {
         h.appendChild(s);
     }})(window,document);
 
-    $('.callback-form form').submit(function(e) {
-        event.preventDefault();
-        document.querySelector('.callback-form form').reset();
-        $('.order-block').removeClass('menu-slide-in')
-        $('.success-message').addClass('active')
-    })
-
     if (window.location.hash === '#order') $('.order-btn').click();
     if (window.location.hash === '#about') $('.about-link').click();
-
 
     var touch = {};
 
     window.onload = function () {
         "use strict";
-        document.body.addEventListener("touchstart", touchHandler);
-        document.body.addEventListener("touchend", touchHandler);
+        document.body.addEventListener("touchstart", touchHandler, {passive: false});
+        document.body.addEventListener("touchend", touchHandler, {passive: false});
     };
 
     function touchHandler(e) {
@@ -55,15 +47,15 @@ $(document).ready(function() {
 
                 if (touch.lenY < 20) {
                     // disable scroll
-                    document.body.style.overflowY = "hidden";
+                    $('body').css('pointer-event', 'none')
                 } else {
                     // enable scroll if swipe was not intended
-                    document.body.style.overflowY = "scroll";
+                    $('body').css('pointer-event', 'auto')
                 }
             }
         } else {
             // keep scroll enabled if touch is outside the image slider 
-            document.body.style.overflowY = "scroll";
+            $('body').css('pointer-event', 'auto')
         }
     }
 
