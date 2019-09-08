@@ -273,3 +273,11 @@ $('.about-component .close').click(function() {
   $('.about-component').removeClass('active');
   stopBodyScrolling(false);
 })
+
+$('.callback-form form').submit(function(e) {
+  event.preventDefault();
+  document.querySelector('.callback-form form').reset();
+  $('.order-block').removeClass('menu-slide-in')
+  $('.success-message').addClass('active')
+  stopBodyScrolling(false);
+})
