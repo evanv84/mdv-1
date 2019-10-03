@@ -89,14 +89,21 @@ $('#menuBtn').click(function() {
     $('.order-block').removeClass('menu-slide-in');
 })
 
+function modalBg() {
+  const bgAnim = new TimelineMax()
+  .to('.image-holder', 100, {x: -800});
+}
+
 $('.order-btn').click(function() {
     $('.order-block').addClass('menu-slide-in')
     stopBodyScrolling(true);
+    modalBg();
 })
 
 $('.order-block .close').click(function() {
   $('.order-block').removeClass('menu-slide-in');
   $('#menu').hasClass('menu-slide-in') ? stopBodyScrolling(true) : stopBodyScrolling(false);
+  bgAnim.pause();
 })
 
 
